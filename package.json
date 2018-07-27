@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "mongodb-stitch-browser-sdk": "^4.0.9",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0"
+  }
+}
