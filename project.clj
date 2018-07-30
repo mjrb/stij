@@ -43,7 +43,9 @@
                            :npm-deps false
                            :infer-externs true
                            :foreign-libs[{:file "dist/stitch_bundle.js"
-                                          :provides ["stitch" "stitch-credentials"]
+                                          :provides ["stitch" "stitch-credentials"
+                                                     "stitch-service-client-factories"
+                                                     "stitch-auth-provider-clients"]
                                           :global-exports
                                           {stitch Stitch
                                            stitch-credentials StitchCredentials
@@ -60,6 +62,16 @@
                            ;;:install-deps true
                            ;;:npm-deps {:mongodb-stitch-browser-sdk "4.0.9"}
                            :optimizations :advanced
+                           :infer-externs true
+                           :foreign-libs[{:file "dist/stitch_bundle.js"
+                                          :provides ["stitch" "stitch-credentials"
+                                                     "stitch-service-client-factories"
+                                                     "stitch-auth-provider-clients"]
+                                          :global-exports
+                                          {stitch Stitch
+                                           stitch-credentials StitchCredentials
+                                           stitch-service-client-factories StitchServiceClientFactories
+                                           stitch-auth-provider-clients StitchAuthProviderClients}}]
                            :pretty-print false}}]}
 
   :figwheel {;; :http-server-root "public" ;; default and assumes "resources"
