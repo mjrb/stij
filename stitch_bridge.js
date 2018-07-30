@@ -11,7 +11,7 @@ import{
     UserPasswordCredential
 } from 'mongodb-stitch-browser-sdk'
 //TODO what package is this in?
-import {StitchAuthResponseCredential} from 'mongodb-stitch-browser-core'
+import {StitchAuthResponseCredential} from 'mongodb-stitch-core-sdk'
 
 window.StitchCredentials={
     anonymous:AnonymousCredential,
@@ -39,11 +39,11 @@ import {RemoteMongoClient}   from 'mongodb-stitch-browser-services-mongodb-remot
 import {TwilioServiceClient} from 'mongodb-stitch-browser-services-twilio'
 
 window.StitchServiceClientFactories={
-    awsS3:AwsS3ServiceClient,
-    awsSES:AwsSesServiceClient,
-    http:HttpServiceClient,
-    mongo:RemoteMongoClient,
-    twilio:TwilioServiceClient
+    awsS3:AwsS3ServiceClient.factory,
+    awsSES:AwsSesServiceClient.factory,
+    http:HttpServiceClient.factory,
+    mongo:RemoteMongoClient.factory,
+    twilio:TwilioServiceClient.factory
 }
 
 import {
