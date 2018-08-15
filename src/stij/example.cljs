@@ -4,7 +4,7 @@
             [stij.service :as service]))
 (def api-key "<test stij app key>")
 ;;in the stitch console you must enable anonymous auth
-;;and add a atlas policy to the namespace test.testObjects
+;;and add a atlas rule for the namespace test.testObjects
 ;;for owners to read their own documents
 
 (enable-console-print!)
