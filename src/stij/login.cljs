@@ -5,6 +5,8 @@
   "logs in a client with given credential"
   (.loginWithCredential client.auth credential))
 
+(def raw-credentials credentials)
+
 ;;todo login with redirect/other login methods
 
 (defn anonymous [client]
