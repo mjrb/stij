@@ -1,10 +1,16 @@
 # stij
 
-FIXME: Write a one-line description of your library/project.
+The beginnings of a Clojurescript library to use MongoDB stitch.
+hopefully in a slightly more Clojurescript way
 
 ## Overview
 
-FIXME: Write a paragraph about the library/project and highlight its goals.
+WIP this eventually should become a CLJSJS package but I'm publishing the work I've done for now until it gets mature enough (and until I grow up and figure out how to package properly)
+
+if you have any questions or want to contribute feel free to open issues/pull requests
+
+right now this wraps the Typescript MongoDB Stitch browser sdk on npm
+I used yarn and webpack to make the sdk accessible from Clojurescript
 
 ## Setup
 
@@ -34,6 +40,6 @@ get live reloading, nor a REPL.
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2018 Mickey J Winters
 
 Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
