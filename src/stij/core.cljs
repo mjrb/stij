@@ -1,9 +1,5 @@
 (ns stij.core
-  (:require [stitch :as stitch]
-            [stij.login :as login]
-            [stij.service :as service]))
-
-(enable-console-print!)
+  (:require [stitch :as stitch]))
 
 (defn set-default-client! [api-key]
   (.initializeDefaultAppClient stitch api-key))
@@ -17,27 +13,7 @@
   (.hasAppClient stitch app-id))
 
 (defn get-default-client []
-  (.defaultAppClient stitch))
+  (.-defaultAppClient stitch))
 
 (defn get-client [app-id]
   (.getAppClient stitch app-id))
-
-
-
-(def test-client (if (has-client? api-key)
-                   (get-client api-key)
-                   (let [temp-client (client! api-key)]
-                     (-> temp-client
-                         (login/anonymous)
-                         ;;(.then js/console.log))))
-                         (.then (fn [whatever] temp-client))))))
-  
-(-> test-client
-    (.then js/console.log)
-    (.catch js/alert))
-    ;; (.then (fn [whatever]
-    ;;          (service/get client service/http)))
-;;             )
-
-(defn on-js-reload [] "")
-
