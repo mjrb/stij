@@ -25,7 +25,7 @@
     (.getServiceClient client factory)))
 
 (defn remote-db [client service-name db-name]
-  (-> (get (mongo service-name) client)
+  (-> (get client (mongo service-name))
       (.db db-name)))
 
 (defn atlas-db [client db-name]
