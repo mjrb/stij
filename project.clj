@@ -24,22 +24,20 @@
                 ;; The presence of a :figwheel configuration here
                 ;; will cause figwheel to inject the figwheel client
                 ;; into your build
-                :figwheel {:on-jsload "stij.core/on-js-reload"
+                :figwheel {:on-jsload "stij.example/on-js-reload"
                            ;; :open-urls will pop open your application
                            ;; in the default browser once Figwheel has
                            ;; started and compiled your application.
                            ;; Comment this out once it no longer serves you.
                            :open-urls ["http://localhost:3449/index.html"]}
 
-                :compiler {:main stij.core
+                :compiler {:main stij.example
                            :asset-path "js/compiled/out"
                            :output-to "resources/public/js/compiled/stij.js"
                            :output-dir "resources/public/js/compiled/out"
                            :source-map-timestamp true
                            ;; To console.log CLJS data-structures make sure you enable devtools in Chrome
                            ;; https://github.com/binaryage/cljs-devtools
-                           ;;:install-deps true
-                           ;;:npm-deps {:mongodb-stitch-browser-sdk "4.0.9"}
                            :npm-deps false
                            :infer-externs true
                            :foreign-libs[{:file "dist/stitch_bundle.js"
@@ -58,9 +56,7 @@
                {:id "min"
                 :source-paths ["src"]
                 :compiler {:output-to "resources/public/js/compiled/stij.js"
-                           :main stij.core
-                           ;;:install-deps true
-                           ;;:npm-deps {:mongodb-stitch-browser-sdk "4.0.9"}
+                           :main stij.example
                            :optimizations :advanced
                            :infer-externs true
                            :foreign-libs[{:file "dist/stitch_bundle.js"
